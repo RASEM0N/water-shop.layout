@@ -146,6 +146,19 @@ body {
         transform: translate(-50%, -50%);
     }
 
+    &__item:first-of-type &__link{
+        left: 59px;
+    }
+
+     &__item:nth-of-type(2) &__link {
+         left: 30px;
+     }
+
+
+    &__item:last-of-type &__link {
+        left: -39px;
+    }
+
     &__link::before{
         content: "";
         position: absolute;
@@ -158,17 +171,17 @@ body {
         left: auto;
     }
 
-    &__link:hover{
-        font-family: 'SFProDisplay-Semibold',sans-serif;
-        font-weight: 600;
-    }
+    // &__link:hover{
+    //     font-family: 'SFProDisplay-Semibold',sans-serif;
+    //     font-weight: 600;
+    // }
 
-    // Анимация с right: 0 и left: auto
-    &__link:hover::before{
-        width: 100%;
-        right: auto;
-        left: 0;
-    }
+    // // Анимация с right: 0 и left: auto
+    // &__link:hover::before{
+    //     width: 100%;
+    //     right: auto;
+    //     left: 0;
+    // }
 
 }
 

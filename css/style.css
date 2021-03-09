@@ -155,6 +155,18 @@ body {
           transform: translate(-50%, -50%);
 }
 
+.menu-categories__item:first-of-type .menu-categories__link {
+  left: 59px;
+}
+
+.menu-categories__item:nth-of-type(2) .menu-categories__link {
+  left: 30px;
+}
+
+.menu-categories__item:last-of-type .menu-categories__link {
+  left: -39px;
+}
+
 .menu-categories__link::before {
   content: "";
   position: absolute;
@@ -166,16 +178,5 @@ body {
   bottom: -2px;
   right: 0;
   left: auto;
-}
-
-.menu-categories__link:hover {
-  font-family: 'SFProDisplay-Semibold',sans-serif;
-  font-weight: 600;
-}
-
-.menu-categories__link:hover::before {
-  width: 100%;
-  right: auto;
-  left: 0;
 }
 /*# sourceMappingURL=style.css.map */
