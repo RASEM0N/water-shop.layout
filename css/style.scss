@@ -11,6 +11,7 @@ html {
 a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
 }
 
 ul,
@@ -38,7 +39,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
-    font-family: 'SFProDisplay-Regular';
+    font-family: 'SFProDisplay-Regular',sans-serif;
 }
 
 .container {
@@ -47,8 +48,9 @@ body {
     margin: 0 auto;
 }
 
-.header {
-    margin-bottom: 78px;
+
+.page-section {
+    margin-bottom: 80px;
 }
 
 .header__top-inner {
@@ -58,7 +60,7 @@ body {
     // контент может измениться поэтому так
     // высоты лучше не указывать конкретную
     min-height: 122px;
-    font-family: 'SFProDisplay-Bold';
+    font-family: 'SFProDisplay-Bold', sans-serif;
     font-weight: 600;
 }
 
@@ -137,7 +139,7 @@ body {
 .menu-categories {
     background-color: #F0F0F4;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     min-height: 53px;
 
@@ -148,8 +150,6 @@ body {
     &__link {
         font-weight: 400;
         padding: 15px 0 14px;
-
-        transform: translate(-50%, -50%);
     }
 
     &__link::before {
@@ -257,7 +257,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
+
     &__top {
         display: flex;
         justify-content: space-between;
@@ -276,26 +276,26 @@ body {
         letter-spacing: 0.1em;
     }
 
-    &__img{
+    &__img {
         // идут оригинальные размеры
         object-fit: contain;
     }
 
-    &__title{
-        font-family: 'SFProDisplay-Bold',sans-serif;
+    &__title {
+        font-family: 'SFProDisplay-Bold', sans-serif;
         font-size: 21px;
         font-weight: 700;
         margin-bottom: 7px;
         padding: 0 20px;
     }
 
-    &__footer{
+    &__footer {
         background-color: #F0F0F4;
         padding: 25px 20px;
         font-size: 18px;
         line-height: 21px;
 
-        span{
+        span {
             color: #1C62CD;
             display: block;
             font-family: Barlow;
@@ -343,7 +343,8 @@ body {
         background-image: url('../images/old-line.svg');
         background-repeat: no-repeat;
     }
-    &-old::after{
+
+    &-old::after {
         content: '';
         background-image: url('../images/icons-price-old.svg');
         position: absolute;
@@ -351,5 +352,72 @@ body {
         right: -12px;
         width: 8px;
         height: 10px;
+    }
+}
+
+.search__tabs {
+    margin-bottom: 25px;
+
+    &-item {
+        padding: 11px 26px 12px;
+    }
+
+    .active {
+        border-radius: 5px;
+        background-color: #F0F0F4;
+        font-weight: 700;
+    }
+}
+
+.search__content {
+
+    &-item{
+        display: none;
+    }
+
+    .active{
+        display: block;
+    }
+
+    &-form {
+        display: flex;
+    }
+
+    
+    &-input{
+        border: none;
+        outline: none;
+        padding: 5px 20px;
+        border-radius: 3px;
+        background-color: #f0f0f4;
+
+        line-height: 19px;
+        font-size: 16px;  
+        width: 100%;
+    }
+
+     &-input::placeholder {
+         color: #656464;
+         font-size: 19px;
+     }
+
+
+    &-btn {
+        font-family: 'SFProDisplay-Bold',
+        sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: white;
+
+        background-color: #1c62cd;
+        border: 0;
+        outline: 0;
+        border-radius: 3px;
+        padding: 17px 41px;
+
+        margin-left: -3px;
     }
 }

@@ -6,4 +6,14 @@ $(function () {
 		nextArrow:
 			'<button class="banner-section__slider-btn banner-section__slider-btnnext"><img src="images/arrow-right.svg" alt="" /></button>',
 	});
+
+	$('.search__tabs-item').on('click', function (e) {
+		e.preventDefault();
+
+		$('.search__tabs-item').removeClass('active');
+		$('.search__content-item').removeClass('active');
+
+		$(this).addClass('active');
+		$($(this).attr('href')).addClass('active');
+	});
 });
