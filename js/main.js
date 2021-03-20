@@ -6,14 +6,21 @@ $(function () {
 		nextArrow:
 			'<button class="banner-section__slider-btn banner-section__slider-btnnext"><img src="images/arrow-right.svg" alt="" /></button>',
 	});
-
-	$('.search__tabs-item').on('click', function (e) {
+	$('.tab').on('click', function (e) {
 		e.preventDefault();
 
-		$('.search__tabs-item').removeClass('active');
-		$('.search__content-item').removeClass('active');
+		$('.tab').removeClass('tab--active');
+		$('.tabs-content').removeClass('tabs-content--active');
 
-		$(this).addClass('active');
-		$($(this).attr('href')).addClass('active');
+		$(this).addClass('tab--active');
+		$($(this).attr('href')).addClass('tabs-content--active');
+	});
+});
+
+const productsIsFavorite = document.querySelectorAll('.product-item__favorite');
+
+productsIsFavorite.forEach((element) => {
+	element.addEventListener('click', () => {
+		element.classList.toggle('product-item__favorite--active');
 	});
 });

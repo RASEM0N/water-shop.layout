@@ -362,20 +362,26 @@ body {
         padding: 11px 26px 12px;
     }
 
-    .active {
+    .tab.tab--active {
         border-radius: 5px;
         background-color: #F0F0F4;
         font-weight: 700;
     }
 }
 
+
 .search__content {
 
-    &-item {
+    .tabs-content {
         display: none;
     }
 
-    .active {
+    .tabs-content--active {
+        display: block;
+    }
+
+
+    .tabs-content--active {
         display: block;
     }
 
@@ -422,6 +428,7 @@ body {
     }
 }
 
+
 .categories__inner {
     display: flex;
     justify-content: space-between;
@@ -440,10 +447,12 @@ body {
     justify-content: space-between;
 
 
-    &:hover &-title{
-        color: #1C62CD;;
+    &:hover &-title {
+        color: #1C62CD;
+        ;
     }
-    &:hover{
+
+    &:hover {
         box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
     }
 
@@ -472,7 +481,7 @@ body {
         color: #C4C4C4;
     }
 
-    &-text::after{
+    &-text::after {
         content: url('../images/categories__litle-arrow.svg');
         padding-left: 2px;
     }
@@ -487,3 +496,264 @@ body {
         }
     }
 }
+
+
+/* --- product --- */
+
+.products__title {
+    font-family: 'Barlow';
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #2F3035;
+    margin-bottom: 25px;
+}
+
+.product-item__wrapper {
+    position: relative;
+    width: 271px;
+
+    .product-item__favorite {
+        position: absolute;
+        top: 16px;
+        right: 19px;
+        background: none;
+        border: none;
+        width: 24px;
+        height: 22px;
+        cursor: pointer;
+        outline: none;
+        z-index: 5;
+    }
+
+    .product-item__favorite::before {
+        position: absolute;
+        content: '';
+        background-image: url('../images/heard.svg');
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 22px;
+        top: 0;
+        left: 0;
+    }
+
+    .product-item__favorite--active::before {
+        background-image: url('../images/heard-blue.svg');
+    }
+
+    .product-item__basket {
+        position: absolute;
+        background: #1C62CD;
+        border-radius: 10px 0px 0px 0px;
+        border: none;
+        padding: 10px 15px 8px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 5;
+        cursor: pointer;
+        outline: none;
+
+        img {
+            width: 30px;
+            height: 23px;
+        }
+    }
+
+
+}
+
+.product-slider {
+    position: relative;
+    margin-bottom: 52px;
+
+    &__arrow {
+        position: absolute;
+        height: 28px;
+        width: 15px;
+        cursor: pointer;
+        border: none;
+        background-color: inherit;
+        outline: none;
+        top: 50%;
+    }
+
+    &__arrow-left {
+        left: -20px;
+        transform: translate(-150%, -50%);
+    }
+
+    &__arrow-right {
+        right: -18px;
+        transform: translate(50%, -50%);
+    }
+
+
+}
+
+.products__tabs {
+    margin-bottom: 25px;
+}
+
+.products__tab {
+    margin-right: 50px;
+    padding-bottom: 10px;
+    border-radius: none;
+
+    font-family: 'SFProDisplay-Medium',
+        sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #2F3035;
+
+    &.tab--active {
+        border-bottom: 2px solid #1C62CD;
+    }
+}
+
+.product-slider__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-item {
+    height: 403px;
+
+    padding: 52px 20px 31px;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-align: center;
+    transition: all 0.3s;
+
+    &__title {
+        padding: 14px 0 25px;
+
+        font-family: 'SFProDisplay-Regular',
+            sans-serif;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #2F3035;
+    }
+
+    &__price {
+        font-family: Barlow;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: #2F3035;
+    }
+
+    &__hover-text {
+        position: absolute;
+        top: 122px;
+        left: 20px;
+        right: 20px;
+
+        padding: 18px 21px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        z-index: 7;
+
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    /* --- sale --- */
+    &--sale::before {
+        content: 'SALE';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #1C62CD;
+        padding: 8px 15px;
+
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.07em;
+        color: #FFFFFF;
+    }
+
+    &:hover &__hover-text {
+        opacity: 1;
+    }
+
+    &:hover {
+        box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    }
+
+    &:hover h4,
+    &:hover h4+p {
+        color: #1C62CD;
+    }
+}
+
+.product-item__notify-text {
+    font-family: 'SFProDisplay-Bold',
+        sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    display: none;
+}
+
+.product-item__notify-link {
+    padding: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 25px;
+    display: none;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1C62CD;
+    text-align: center;
+
+    span {
+        border-bottom: 1px solid #1C62CD;
+    }
+}
+
+/* not available a product */
+.product-item__wrapper.product-item__not-available {
+    .product-item__price {
+        display: none;
+    }
+
+    .product-item__basket {
+        display: none;
+    }
+
+    .product-item__title {
+        padding-bottom: 20px;
+    }
+
+    .product-item__notify-text,
+    .product-item__notify-link {
+        display: block;
+    }
+}
+
+.products__more {
+    text-align: center;
+
+    &-link {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: #F0F0F4;
+        padding: 17px 43px 15px;
+        display: inline-block;
+    }
+}
+
+/* --- product end --- */
