@@ -613,7 +613,7 @@ body {
 }
 
 .product-slider__arrow-right {
-  right: -18px;
+  right: -20px;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
 }
@@ -648,6 +648,7 @@ body {
 
 .product-item {
   height: 403px;
+  width: 271px;
   padding: 52px 20px 31px;
   border: 1px solid #CDCDCD;
   -webkit-box-sizing: border-box;
@@ -781,4 +782,126 @@ body {
 }
 
 /* --- product end --- */
+.products-populate.page-section {
+  margin-bottom: 100px;
+}
+
+/* --- footer --- */
+.footer {
+  background: #F0F0F4;
+}
+
+.footer__top {
+  padding-top: 43px;
+}
+
+.footer__top-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__top-item:last-of-type {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer__top-newslatter {
+  width: 295px;
+}
+
+.footer__top-title {
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.footer-list {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.footer-list__item {
+  margin-top: 6px;
+}
+
+.footer-form {
+  margin-top: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-form__input {
+  background-color: white;
+  border: none;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 13px;
+}
+
+.footer-form__input::-webkit-input-placeholder {
+  color: #C4C4C4;
+}
+
+.footer-form__input:-ms-input-placeholder {
+  color: #C4C4C4;
+}
+
+.footer-form__input::-ms-input-placeholder {
+  color: #C4C4C4;
+}
+
+.footer-form__input::placeholder {
+  color: #C4C4C4;
+}
+
+.footer-form__button {
+  font-family: 'SFProDisplay-Semibold', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border: none;
+  background-color: #1C62CD;
+  color: white;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-list__item + .social-list__item {
+  margin-left: 30px;
+}
+
+.footer__bottom {
+  padding: 46px 0 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__bottom-link {
+  line-height: 12px;
+  color: #48494D;
+  font-size: 10px;
+  margin: 0 40px;
+}
 /*# sourceMappingURL=style.css.map */
