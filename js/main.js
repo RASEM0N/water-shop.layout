@@ -24,3 +24,22 @@ productsIsFavorite.forEach((element) => {
 		element.classList.toggle('product-item__favorite--active');
 	});
 });
+
+const filterBtn = document.querySelectorAll('.catalog__filter-btn button');
+
+filterBtn.forEach((element) => {
+	element.addEventListener('click', () => {
+		element.classList.toggle('catalog__filter-btn--active');
+	});
+});
+
+if (pagination) {
+	pagination.addEventListener('click', function (e) {
+		if (e.target.className == 'pagination-list__item') {
+			document.querySelectorAll('.pagination-list__item').forEach((item) => {
+				item.classList.remove('pagination-list__item--active');
+			});
+			e.target.classList.add('pagination-list__item--active');
+		}
+	});
+}
