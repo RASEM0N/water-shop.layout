@@ -43,3 +43,14 @@ if (pagination) {
 		}
 	});
 }
+
+if (asidetabs) {
+	asidetabs.addEventListener('click', (e) => {
+		if (e.target.className === 'aside-filter__tab') {
+			document.querySelectorAll('.aside-filter__tab').forEach((item) => {
+				item.classList.remove('tab--active');
+			});
+			e.target.classList.add('tab--active');
+		}
+	});
+}

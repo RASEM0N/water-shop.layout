@@ -14,6 +14,10 @@ a {
     display: inline-block;
 }
 
+button {
+    outline: none;
+}
+
 ul,
 li {
     margin: 0;
@@ -35,6 +39,8 @@ p {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     color: #2F3035;
     font-size: 20px;
     line-height: 24px;
@@ -983,7 +989,7 @@ body {
     display: flex;
 
     &-aside {
-        background-color: rgba(252, 249, 249, 0.363);
+
         min-width: 290px;
         margin-right: 10px;
         margin-bottom: 30px;
@@ -1031,4 +1037,49 @@ body {
     &-list__item a {
         display: block;
     }
+}
+
+
+.aside-filter {
+
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__tab {
+        position: relative;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #C4C4C4;
+        padding-bottom: 7px;
+    }
+
+    &__tab:last-of-type {
+        margin-right: 25px;
+    }
+
+    &__tab.tab--active {
+        color: #2F3035;
+        font-weight: bold;
+    }
+
+    &__tab::after {
+        content: '';
+        border-bottom: 1px solid #1C62CD;
+        width: 0%;
+        background-color: #1C62CD;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width 0.5s ease;
+    }
+
+    &__tab.tab--active::after {
+        width: 100%;
+    }
+
 }
